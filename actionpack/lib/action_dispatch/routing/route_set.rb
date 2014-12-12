@@ -247,7 +247,7 @@ module ActionDispatch
             end
 
             def missing_keys(args)
-              args.select{ |part, arg| arg.nil? || arg.empty? }.keys
+              args.select{ |part, arg| arg.blank? }.keys
             end
 
             def raise_generation_error(args, missing_keys)
